@@ -1,8 +1,8 @@
-> this is a WIP based on [Builtins.bend](https://github.com/HigherOrderCO/Bend/blob/main/src/fun/builtins.bend).
+> this is a WIP based on [Builtins.bend](../src/fun/builtins.bend).
 
 # Built-in Types and Functions
 
-**Bend** built-in types and functions, this document serves as a reference guide. Read more at [FEATURES.md](https://github.com/HigherOrderCO/Bend/blob/main/FEATURES.md).
+**Bend** built-in types and functions, this document serves as a reference guide. Read more at [FEATURES.md](../FEATURES.md).
 
 ## String
 
@@ -104,7 +104,7 @@ List/flatten([[1], [2, 3], [4]])
 
 ```python
 #{
-  Appends two lists together. 
+  Appends two lists together.
 #}
 def List/concat(xs: (List T)) (ys: (List T)) : (List T)
 ```
@@ -130,7 +130,7 @@ List/filter(xs: List(T), pred: T -> Bool) -> List(T)
 #{
   Splits a list into two lists at the first occurrence of a value.
 #}
-def List/split_once(xs: List(T), cond: T -> u24) -> (Result((List(T), List(T)), List(T))): 
+def List/split_once(xs: List(T), cond: T -> u24) -> (Result((List(T), List(T)), List(T))):
 ```
 Example:
 ```python
@@ -193,7 +193,7 @@ Technically your trees don't need to end with leaves, but if you don't, your pro
 ```python
 type Maybe(T):
   Some{ value }
-  None 
+  None
 ```
 **`Maybe`** is a structure that may or not contain a value. It is meant to be used as a return type for functions that can fail. This way you don't need to resort to unreachable() in order to handle errors.
 
@@ -208,7 +208,7 @@ maybe = Maybe/Some(Nat/Succ(Nat/Zero))
 ```python
 #{
 Returns the value inside the `Maybe` if it is `Some`, and returns `unreachable()` if it is `None`.
-#}  
+#}
 def Maybe/unwrap(m: Maybe(T)) -> T
 ```
 ## Map
@@ -216,7 +216,7 @@ def Maybe/unwrap(m: Maybe(T)) -> T
 ```python
 type Map(T):
   Node { value: Maybe(T), ~left: Map(T), ~right: Map(T) }
-  Leaf  
+  Leaf
 ```
 
 **`Map`** represents a tree with values stored in the branches.
@@ -257,7 +257,7 @@ Here, `map` must be the name of the `Map` variable, and the keys inside `[]` can
 ```python
 #{
   Initializes an empty map.
-#} 
+#}
 def Map/empty() -> Map(T)
 ```
 
@@ -268,8 +268,8 @@ def Map/empty() -> Map(T)
 ```rust
 #{
   Retrieves a `value` from the `map` based on the `key` and returns a tuple with the value and the `map` unchanged.
-  
-  The logic for checking whether a value is or not contained in a `map` is not done in the `get` function, so if we try to get a key that is not in the map, the program will return `unreachable`. 
+
+  The logic for checking whether a value is or not contained in a `map` is not done in the `get` function, so if we try to get a key that is not in the map, the program will return `unreachable`.
 #}
 def Map/get (map: Map(T), key: u24) -> (T, Map(T))
 ```
@@ -562,7 +562,7 @@ def IO/FS/write_file(path: String, bytes: List(u24)) -> IO(Result(None, u24))
 #{
   Moves the current position of the file with the given `file` descriptor to the given `offset`, an I24 or U24 number, in bytes.
 #}
-def IO/FS/seek(file: u24, offset: i24, mode: i24) -> IO(Result(None, u24)) 
+def IO/FS/seek(file: u24, offset: i24, mode: i24) -> IO(Result(None, u24))
 ```
 
 `mode` can be one of the following:
@@ -814,7 +814,7 @@ def Math/tan -> (f24 -> f24)
 #{
   Computes the cotangent of the given angle in radians.
 #}
-Math/cot (a: f24) : f24 
+Math/cot (a: f24) : f24
 ```
 
 ### Math/sec
@@ -824,7 +824,7 @@ Math/cot (a: f24) : f24
 #{
   Computes the secant of the given angle in radians.
 #}
-Math/sec (a: f24) : f24 
+Math/sec (a: f24) : f24
 ```
 
 ### Math/csc
@@ -834,7 +834,7 @@ Math/sec (a: f24) : f24
 #{
   Computes the cosecant of the given angle in radians.
 #}
-Math/csc (a: f24) : f24 
+Math/csc (a: f24) : f24
 ```
 
 ### Math/atan
@@ -845,7 +845,7 @@ Math/csc (a: f24) : f24
 #{
   Computes the arctangent of the given angle.
 #}
-Math/atan (a: f24) : f24 
+Math/atan (a: f24) : f24
 ```
 
 ### Math/asin
@@ -855,7 +855,7 @@ Math/atan (a: f24) : f24
 #{
   Computes the arcsine of the given angle.
 #}
-Math/asin (a: f24) : f24 
+Math/asin (a: f24) : f24
 ```
 
 ### Math/acos
@@ -874,7 +874,7 @@ Math/acos (a: f24) : f24
 #{
   Converts degrees to radians.
 #}
-Math/radians (a: f24) : f24 
+Math/radians (a: f24) : f24
 ```
 
 ### Math/sqrt
@@ -884,7 +884,7 @@ Math/radians (a: f24) : f24
 #{
   Computes the square root of the given number.
 #}
-Math/sqrt (n: f24) : f24 
+Math/sqrt (n: f24) : f24
 ```
 
 ### Math/ceil

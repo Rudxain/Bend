@@ -11,8 +11,8 @@
 
 ## Introduction
 
-Bend offers the feel and features of expressive languages like Python and Haskell. This includes fast object allocations, full support for higher-order functions with closures, unrestricted recursion, and even continuations.                             
-Bend scales like CUDA, it runs on massively parallel hardware like GPUs, with nearly linear acceleration based on core count, and without explicit parallelism annotations: no thread creation, locks, mutexes, or atomics.                     
+Bend offers the feel and features of expressive languages like Python and Haskell. This includes fast object allocations, full support for higher-order functions with closures, unrestricted recursion, and even continuations.
+Bend scales like CUDA, it runs on massively parallel hardware like GPUs, with nearly linear acceleration based on core count, and without explicit parallelism annotations: no thread creation, locks, mutexes, or atomics.
 Bend is powered by the [HVM2](https://github.com/higherorderco/hvm) runtime.
 
 
@@ -108,7 +108,7 @@ def Sum(start, target):
   else:
     # If start is not equal to target, recursively call Sum with
     # start incremented by 1, and add the result to start.
-    return start + Sum(start + 1, target)  
+    return start + Sum(start + 1, target)
 
 def main():
   # This translates to (1 + (2 + (3 + (...... + (999999 + 1000000)))))
@@ -163,7 +163,7 @@ def main():
   return Sum(1, 1_000_000)
 ```
 
-In this example, the (3 + 4) sum does not depend on the (1 + 2), meaning that it can run in parallel because both computations can happen at the same time. 
+In this example, the (3 + 4) sum does not depend on the (1 + 2), meaning that it can run in parallel because both computations can happen at the same time.
 
 ##### Running the file
 You can run it using Rust interpreter (Sequential)
@@ -195,7 +195,7 @@ The code snippet below implements a [bitonic sorter](https://en.wikipedia.org/wi
 
  <details>
   <summary><b>Click here for the Bitonic Sorter code</b></summary>
-   
+
 
 ```py
 # Sorting Network = just rotate trees!
@@ -274,13 +274,13 @@ def main:
 ```
 
 </details>
-  
-if you are interested in some other algorithms, you can check our [examples folder](https://github.com/HigherOrderCO/Bend/tree/main/examples)
+
+if you are interested in some other algorithms, you can check our [examples folder](examples)
 
 
 ### Additional Resources
  - To understand the technology behind Bend, check out the HVM2 [paper](https://paper.higherorderco.com/).
  - We are working on an official documentation, meanwhile for a more in depth
-     explanation check [GUIDE.md](https://github.com/HigherOrderCO/Bend/blob/main/GUIDE.md)
- - Read about our features at [FEATURES.md](https://github.com/HigherOrderCO/Bend/blob/main/FEATURES.md)
+     explanation check [GUIDE.md](GUIDE.md)
+ - Read about our features at [FEATURES.md](FEATURES.md)
  - Bend is developed by [HigherOrderCO](https://higherorderco.com/) - join our [Discord](https://discord.higherorderco.com)!

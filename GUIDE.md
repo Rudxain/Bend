@@ -816,7 +816,7 @@ reach 1000+ MIPS.
 ## To be continued...
 
 This guide isn't extensive, and there's a lot uncovered. For example, Bend also
-has an entire Haskell-like functional syntax that is compatible with old HVM1, you can find it documented [here](https://github.com/HigherOrderCO/Bend/blob/main/docs/syntax.md#fun-syntax). You can also check [this](https://gist.github.com/VictorTaelin/9cbb43e2b1f39006bae01238f99ff224) out, it's an implementation of the Bitonic Sort with Haskell-like equations. 
+has an entire Haskell-like functional syntax that is compatible with old HVM1, you can find it documented [here](docs/syntax.md#fun-syntax). You can also check [this](https://gist.github.com/VictorTaelin/9cbb43e2b1f39006bae01238f99ff224) out, it's an implementation of the Bitonic Sort with Haskell-like equations.
 
 ## Community
 

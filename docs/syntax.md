@@ -95,7 +95,7 @@ The `~` notation indicates a recursive field. To use `fold` statements with a ty
 The constructor names inherit the name of their types and become functions (`Tree/Node` and `Tree/Leaf` in this case).
 The exact function they become depends on the encoding.
 
-Read [defining data types](./defining-data-types.md) to know more.
+Read [defining data types](defining-data-types.md) to know more.
 
 ### Object
 
@@ -567,7 +567,7 @@ A Tuple is surrounded by `(` `)` and should contain 2 or more elements. Elements
 
 A superposition of values is defined using `{` `}` with at least 2 expressions inside. Elements can be optionally separated by `,`.
 
-Read [sups and dups](./dups-and-sups.md) to know more.
+Read [sups and dups](dups-and-sups.md) to know more.
 
 ### Numbers and Infix Operations
 
@@ -783,7 +783,7 @@ Unscoped variables can't be defined in a rule pattern.
 
 The rule body is a term, there are no statements in the Fun variant of Bend.
 
-Read [pattern matching](./pattern-matching.md) to learn about what exactly the rules for pattern matching equations are.
+Read [pattern matching](pattern-matching.md) to learn about what exactly the rules for pattern matching equations are.
 
 ### Type
 
@@ -881,7 +881,7 @@ A tuple is surrounded by `(` `)`, with the difference that it's elements are sep
 
 A superposition of values is defined using `{` `}` with at least 2 terms inside.
 
-Read [sups and dups](./dups-and-sups.md) to know more.
+Read [sups and dups](dups-and-sups.md) to know more.
 
 ### Let-bindings
 
@@ -962,7 +962,7 @@ A pattern match expression, it can hold a name binding if the matching term is n
 
 It is possible to use a _wildcard_, a named variable or `*` as default cases.
 
-It is desugared according to the chosen encoding. Read [pattern matching](./pattern-matching.md) to know more.
+It is desugared according to the chosen encoding. Read [pattern matching](pattern-matching.md) to know more.
 
 Using `;` is optional.
 

@@ -121,8 +121,8 @@ hvm native_id -> (a -> a):
 
 Currently, the following are not supported by the type checker:
 
-- Superpositions (`{a, b}`, the tuple type with duplication semantics, see [Dups and sups](https://github.com/HigherOrderCO/Bend/blob/main/docs/dups-and-sups.md)).
-- Unscoped variables and variable binds (`$a`, `let $a = ...`, see [Scopeless lambdas](https://github.com/HigherOrderCO/Bend/blob/main/docs/using-scopeless-lambdas.md)).
+- Superpositions (`{a, b}`, the tuple type with duplication semantics, see [Dups and sups](dups-and-sups.md)).
+- Unscoped variables and variable binds (`$a`, `let $a = ...`, see [Scopeless lambdas](using-scopeless-lambdas.md)).
 - Expressions not typeable by a Hindley-Milner type system (e.g. self application `λx: x(x)`).
 
 Additionally, the builtin types `Number` and `Integer` can't be used directly in type annotations. They are used internally by the type checker to handle numeric expressions.
